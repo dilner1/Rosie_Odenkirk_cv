@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
 </head>
 
 <body>
@@ -215,6 +213,12 @@ function initMap() {
     });
   });
 
+  const locations = [
+    { lat: 40.785078, lng: -73.968245 },
+    { lat: 40.785070, lng: -73.968250 },
+    { lat: 40.785045, lng: -73.968230 },
+    { lat: 40.785100, lng: -73.968200 },
+];
 
   new MarkerClusterer(map, markers, {
     imagePath:
@@ -222,16 +226,9 @@ function initMap() {
   });
 }
 
-const locations = [
-    { lat: 40.785078, lng: -73.968245 },
-    { lat: 40.785070, lng: -73.968250 },
-    { lat: 40.785045, lng: -73.968230 },
-    { lat: 40.785100, lng: -73.968200 },
-];
-
         // api key AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4
     </script>
-    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4&callback=initMap&v=weekly"
     async
