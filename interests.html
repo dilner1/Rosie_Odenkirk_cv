@@ -194,42 +194,15 @@
                 </ul>
             </div>
         </div>
-
     </footer>
-    <script>function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 3,
-          center: { lat: 40.785091, lng: -73.968285  },
-        });
-      
-        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      
-        const markers = locations.map((location, i) => {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-          });
-        });
-      
-        const locations = [
-          { lat: 40.785078, lng: -73.968245 },
-          { lat: 40.785070, lng: -73.968250 },
-          { lat: 40.785045, lng: -73.968230 },
-          { lat: 40.785100, lng: -73.968200 },
-      ];
-      
-        new MarkerClusterer(map, markers, {
-          imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-        });
-      }
-      
-              // api key AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4</script>
+    <script>
+        // api key AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4
+    </script>
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4&callback=initMap&v=weekly"
     async
   ></script>
-    <!-- <script src="assets/js/maps.js"></script> -->
+    <script src="assets/js/maps.js"></script>
 </body>
 </html>
