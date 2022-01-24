@@ -197,15 +197,36 @@
 
     </footer>
     <script>
-        // import { MarkerClusterer } from "@googlemaps/markerclusterer";
+
         function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 3,
-                center: {
-                    lat: 46.619261,
-                    lng: -33.134766
-                }
+            const locations = [
+            { lat: 40.785078, lng: -73.968245 },
+            { lat: 40.785093, lng: -73.968287 },
+            { lat: 40.785045, lng: -73.968230 },
+            { lat: 40.785099, lng: -73.968299 },
+        ];
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: { lat: 40.785091, lng: -73.968285 }
+        });
+        
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            
+            new google.maps.Marker({
+                position: { lat: 40.785091, lng: -73.968285 },
+                map,
+                title: "Hello World!",
             });
+
+            new MarkerClusterer({ markers, map });
+
+            const markers = locations.map(function(location, i) {
+                return new google.map.Marker({
+                    position: location,
+                    label: label[i % lebels.length],
+                })
+            })
         }
 
         // api key AIzaSyAyEnwnsLLMwIQwtM5kDD-hDsNE9gCOeA4
