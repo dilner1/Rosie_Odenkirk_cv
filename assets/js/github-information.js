@@ -24,10 +24,17 @@ function repoInformationHTML(repos) {
     var listItemsHtml = epos.map(function(repo) {
         return `<li>
                     <a href='${repo.html_url}' target='_blank'>${repo.name}</a>    
-        </li>`;
+                </li>`;
         
     })
-    return `<div class='clearfix repo-list'></div>`
+    return `<div class='clearfix repo-list'>
+                <p>
+                    <stong>Repo list:</stong>
+                </p>
+                <ul>
+                    ${listItemsHtml.join('\n')}
+                </ul>
+            </div>`
 };
 
 function fetchGitHubInformation(event) {
